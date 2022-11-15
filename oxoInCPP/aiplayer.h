@@ -6,7 +6,10 @@
 class AIPlayer : public Player
 {
 public:
-    void placeChar(void);
+    void placeChar(void)
+    {
+
+    }
 };
 
 #endif // AIPLAYER_H

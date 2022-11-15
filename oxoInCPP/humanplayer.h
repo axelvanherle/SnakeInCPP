@@ -6,7 +6,10 @@
 class HumanPlayer : public Player
 {
 public:
-    void placeChar(void);
+    void placeChar(void)
+    {
+
+    }
 };
 
 #endif // HUMANPLAYER_H
