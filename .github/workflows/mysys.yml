@@ -18,7 +18,7 @@ jobs:
         run: |
           echo 'Running in MSYS2!'
           mkdir .build
-          g++ -o .build/oxoByAxel.exe oxoInCPP/main.cpp
+          g++ oxoInCPP/*.cpp -o .build/oxoByAxel.exe
       - uses: actions/upload-artifact@v3
         with:
           name: oxoByAxel.exe
