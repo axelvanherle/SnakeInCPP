@@ -10,6 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: msys2/setup-msys2@v2
+      - uses: actions/upload-artifact@v2
         with:
           msystem: UCRT64
           update: true
@@ -23,13 +24,7 @@ jobs:
         with:
           name: oxoByAxel.exe
           path: .build/oxoByAxel.exe
-          
-      - uses: actions/create-release@v1
-        id: create_release
+      - name: Archive Artifacts
         with:
-          draft: false
-          prerelease: false
-          release_name: ${{ steps.version.outputs.version }}
-          tag_name: ${{ github.ref }}
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
+          name: "App-Artifacts"
+          path: artifacts/*
