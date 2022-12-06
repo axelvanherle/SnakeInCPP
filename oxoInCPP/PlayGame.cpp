@@ -5,6 +5,7 @@
 PlayGame::PlayGame()
 {
     cout << "Game started." << endl;
+    setPlayerValues();
 }
 
 void PlayGame::setPlayerValues(void)
