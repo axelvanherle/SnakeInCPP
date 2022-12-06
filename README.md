@@ -42,13 +42,13 @@ To download the latest compiled version for windows you can download the exe und
     - Player and PlayGame class.
 - [ ] member initialization in constructors (the stuff after a colon)
 - [ ] constructor forwarding
-- [ ] useful proven (dynamic) polymorphism
+- [X] useful proven (dynamic) polymorphism
 - [ ] useful use of "this" (if code doesn't work without it)
-- [ ] useful member function
+- [X] useful member function
 - [ ] default values in function definition
-- [ ] useful member variable
-- [ ] useful getters and setters for member variables
-- [ ] correct use of inline function
+- [X] useful member variable
+- [X] useful getters and setters for member variables
+- [X] correct use of inline function
 - [ ] useful template function or class
 - [ ] useful friend function or class
 
@@ -59,13 +59,13 @@ To download the latest compiled version for windows you can download the exe und
 - [ ] at least 4 useful const references for variables
 - [ ] at least 4 useful const references for functions
 - [ ] at least 4 useful bool
-- [ ] dynamic memory allocation (new)
-- [ ] dynamic memory delete (delete)
+- [X] dynamic memory allocation (new)
+- [X] dynamic memory delete (delete)
 - [ ] 2 useful (modern) call-by-references
-- [ ] useful string class usage
+- [X] useful string class usage
 - [ ] useful container class
-- [ ] useful use of nullptr
-- [ ] useful use of (modern) file I/O
+- [X] useful use of nullptr
+- [X] useful use of (modern) file I/O
 - [ ] useful exception handling
 - [ ] useful use of lambda function
 - [ ] useful use of threads
