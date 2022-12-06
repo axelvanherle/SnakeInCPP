@@ -9,16 +9,16 @@ To download the latest compiled version for windows you can download the exe und
 ### Points
 
 #### Basics
-- [ ] useful and proper class (explain why)
-- [ ] useful and correct abstraction (explain why)
-- [ ] useful and correct encapsulation (explain why)
-- [ ] useful and correct inheritance (explain why)
-- [ ] useful and correct polymorphism (explain why)
-- [ ] useful and correct object composition (explain why)
-- [ ] useful and correct base class
-- [ ] useful and correct abstract base class
-- [ ] useful and correct virtual function
-- [ ] no error in object-oriented programming
+- [X] useful and proper class (explain why)
+- [X] useful and correct abstraction (explain why)
+- [X] useful and correct encapsulation (explain why)
+- [X] useful and correct inheritance (explain why)
+- [X] useful and correct polymorphism (explain why)
+- [X] useful and correct object composition (explain why)
+- [X] useful and correct base class
+- [X] useful and correct abstract base class
+- [X] useful and correct virtual function
+- [X] no error in object-oriented programming
 
 #### Supplementary
 **General**
