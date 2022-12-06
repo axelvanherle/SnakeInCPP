@@ -38,7 +38,8 @@ To download the latest compiled version for windows you can download the exe und
     - Player and PlayGame class.
 - [ ] at least 2 parameterized constructors
 - [ ] at least 2 copy constructors
-- [ ] at least 2 destructors
+- [X] at least 2 destructors
+    - Player and PlayGame class.
 - [ ] member initialization in constructors (the stuff after a colon)
 - [ ] constructor forwarding
 - [ ] useful proven (dynamic) polymorphism
