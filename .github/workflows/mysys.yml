@@ -10,7 +10,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: msys2/setup-msys2@v2
-      - uses: actions/upload-artifact@v2
         with:
           msystem: UCRT64
           update: true
@@ -24,7 +23,3 @@ jobs:
         with:
           name: oxoByAxel.exe
           path: .build/oxoByAxel.exe
-      - name: Archive Artifacts
-        with:
-          name: "App-Artifacts"
-          path: artifacts/*
