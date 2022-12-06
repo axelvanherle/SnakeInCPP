@@ -22,16 +22,16 @@ To download the latest compiled version for windows you can download the exe und
 
 #### Supplementary
 **General**
-- [ ] clean main (i.e. nothing in the main that belongs in a class)
-- [ ] no globals, but statics if needed
-- [ ] correct safeguards
-- [ ] maintainability through clean uniform code style and proper function naming and/or comments everywhere
-- [ ] separate header files
-- [ ] one complete project that compiles and does not crash
-- [ ] fully working project
-- [ ] sufficient git commits (+/- weekly)
-- [ ] correct files on git
-- [ ] working build manual as readme on GitHub (project must be buildable from scratch on a clean PC)
+- [X] clean main (i.e. nothing in the main that belongs in a class)
+- [X] no globals, but statics if needed
+- [X] correct safeguards
+- [X] maintainability through clean uniform code style and proper function naming and/or comments everywhere
+- [X] separate header files
+- [X] one complete project that compiles and does not crash
+- [X] fully working project
+- [X] sufficient git commits (+/- weekly)
+- [X] correct files on git
+- [X] working build manual as readme on GitHub (project must be buildable from scratch on a clean PC)
 
 **OOP**
 - [X] at least 2 standard constructors
