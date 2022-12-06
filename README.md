@@ -54,7 +54,8 @@ To download the latest compiled version for windows you can download the exe und
 
 **C++**
 - [ ] everything in one or more custom namespaces
-- [ ] 2 useful unsigned chars or other better use of memory-efficient type
+- [X] 2 useful unsigned chars or other better use of memory-efficient type
+    - PlayGame::makePlayerObjects, player.h
 - [ ] at least 4 useful const references for variables
 - [ ] at least 4 useful const references for functions
 - [ ] at least 4 useful bool
