@@ -34,7 +34,8 @@ To download the latest compiled version for windows you can download the exe und
 - [ ] working build manual as readme on GitHub (project must be buildable from scratch on a clean PC)
 
 **OOP**
-- [ ] at least 2 standard constructors
+- [X] at least 2 standard constructors
+    - Player and PlayGame class.
 - [ ] at least 2 parameterized constructors
 - [ ] at least 2 copy constructors
 - [ ] at least 2 destructors
