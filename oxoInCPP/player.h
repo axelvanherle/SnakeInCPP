@@ -14,31 +14,37 @@ using namespace std;
 class Player
 {
 public:
+    // Standard constructor
     Player()
     {
+        cout << "Player object made" << endl;
+    }
 
+    virtual ~Player()
+    {
+        cout << "Player object destroyed." << endl;
     }
 
     // Setter
-    void setPlayerName(string newName)
+    inline void setPlayerName(string newName)
     {
        playerName = newName;
     }
 
     // Getter
-    string getPlayerName(void)
+    inline string getPlayerName(void)
     {
         return playerName;
     }
 
     // Setter
-    void setplayerChar(char newChar)
+    inline void setPlayerChar(char newChar)
     {
         playerSymbol = newChar;
     }
 
     // Getter
-    char getplayerChar(void)
+    inline char getPlayerChar(void)
     {
         return playerSymbol;
     }
@@ -48,7 +54,7 @@ public:
 
 private:
     string playerName;
-    char playerSymbol;
+    unsigned char playerSymbol;
 };
 
 #endif // PLAYER_H

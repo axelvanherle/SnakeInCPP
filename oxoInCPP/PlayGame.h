@@ -12,15 +12,24 @@ using namespace std;
 class PlayGame
 {
 public:
+    // Standard constructor
     PlayGame();
+    // Deconstructor
+    ~PlayGame();
+
+    // Make the player objects
+    void makePlayerObjects(void);
 
     // Getter and Setter.
     void setPlayerValues(void);
     void getPlayerValues(void);
 
+    // Play the game
+    void PlayTicTacToe(void);
+
 private:
-    HumanPlayer player1;
-    AIPlayer player2;
+    Player* player1;
+    Player* player2;
 };
 
 #endif // PLAYGAME_H

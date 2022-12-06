@@ -9,7 +9,8 @@ CONFIG -= app_bundle
 
 SOURCES += \
         PlayGame.cpp \
-        main.cpp
+        main.cpp \
+        playingfield.cpp
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -20,4 +21,5 @@ HEADERS += \
     PlayGame.h \
     aiplayer.h \
     humanplayer.h \
-    player.h
+    player.h \
+    playingfield.h

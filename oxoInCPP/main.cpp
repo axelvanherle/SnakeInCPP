@@ -10,9 +10,9 @@ int main()
     // Make the game object.
     PlayGame game;
 
-    cout << "OXO by Axel Vanherle." << endl;
+    cout << "TicTacToe by Axel Vanherle." << endl;
 
-    // Set the names of the players.
+    // Get the names of the players.
     game.setPlayerValues();
     game.getPlayerValues();
 }
