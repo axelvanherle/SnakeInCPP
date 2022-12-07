@@ -13,7 +13,6 @@ PlayGame::PlayGame()
     {
         exit (-1);
     }
-    setPlayerValues();
 }
 
 PlayGame::~PlayGame()
@@ -36,6 +35,7 @@ void PlayGame::makePlayerObjects(void)
         {
             player1 = new HumanPlayer();
             cout << "Created a human player." << endl;
+            setPlayerValues(player1);
         }
         else if (temp == 2)
         {
@@ -55,6 +55,7 @@ void PlayGame::makePlayerObjects(void)
         {
             player2 = new HumanPlayer();
             cout << "Created a human player." << endl;
+            setPlayerValues(player2);
         }
         else if (temp == 2)
         {
@@ -69,30 +70,21 @@ void PlayGame::makePlayerObjects(void)
 
         cout << "Players set. Continue? [y/n]: ";
         cin >> var;
-
+        system("CLS");
     }
 }
 
-void PlayGame::setPlayerValues(void)
+void PlayGame::setPlayerValues(Player* newPlayer)
 {
     string newName;
-    char newChar;
+    unsigned char newChar;
 
-    cout << "Player 1 name?: ";
+    cout << "Player name?: ";
     cin >> newName;
-    player1->setPlayerName(newName);
-    cout << endl << "Speler 1 char?: ";
+    newPlayer->setPlayerName(newName);
+    cout << endl << "Speler char?: ";
     cin >> newChar;
-    player1->setPlayerChar(newChar);
-
-    cout << endl <<  "Speler 2 naam?: ";
-    cin >> newName;
-    player2->setPlayerName(newName);
-    cout << endl << "Speler 2 char?: ";
-    cin >> newChar;
-    player2->setPlayerChar(newChar);
-
-    cout << endl << endl << "Player values set." << endl;
+    newPlayer->setPlayerChar(newChar);
 }
 
 void PlayGame::getPlayerValues(void)

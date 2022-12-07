@@ -21,7 +21,7 @@ public:
     void makePlayerObjects(void);
 
     // Getter and Setter.
-    void setPlayerValues(void);
+    void setPlayerValues(Player* newPlayer);
     void getPlayerValues(void);
 
     // Play the game

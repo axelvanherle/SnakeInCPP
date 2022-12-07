@@ -6,15 +6,26 @@
 */
 
 #include "player.h"
+#include <cstdlib>
+using namespace std;
 
 // Inherit from the player class.
 class AIPlayer : public Player
 {
 public:
+    AIPlayer()
+    {
+        // Providing a seed value
+        srand((unsigned) time(NULL));
+
+        setPlayerName("AI Player");
+
+        //Set a random char.
+        setPlayerChar((rand() % 94 )+ 33);
+    }
     // This funtion will place the char on the playing field.
     void placeChar(void)
     {
-
     }
 };
 
