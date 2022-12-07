@@ -18,8 +18,8 @@ jobs:
         run: |
           echo 'Running in MSYS2!'
           mkdir .build
-          g++ oxoInCPP/*.cpp -o .build/oxoByAxel.exe
+          g++ ticTacToeInCPP/*.cpp -o .build/ticTacToeByAxel.exe
       - uses: actions/upload-artifact@v3
         with:
-          name: oxoByAxel.exe
-          path: .build/oxoByAxel.exe
+          name: ticTacToeByAxel.exe
+          path: .build/ticTacToeByAxel.exe
