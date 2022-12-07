@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include <string>
+#include "playingfield.h"
 
 using namespace std;
 
@@ -50,7 +51,7 @@ public:
     }
 
     // Virtual function that AI and Human class can overwrite.
-    virtual void placeChar(void) = 0;
+    virtual void placeChar(PlayingField *field) = 0;
 
 private:
     string playerName;

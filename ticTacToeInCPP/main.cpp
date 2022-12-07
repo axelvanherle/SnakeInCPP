@@ -14,4 +14,7 @@ int main()
 
     // Get the names of the players.
     game.getPlayerValues();
+    game.PlayTicTacToe();
+
+    return EXIT_SUCCESS;
 }

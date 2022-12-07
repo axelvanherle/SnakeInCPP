@@ -6,6 +6,7 @@
 */
 
 #include "player.h"
+#include "playingfield.h"
 #include <cstdlib>
 using namespace std;
 
@@ -24,8 +25,16 @@ public:
         setPlayerChar((rand() % 94 )+ 33);
     }
     // This funtion will place the char on the playing field.
-    void placeChar(void)
+    void placeChar(PlayingField *field)
     {
+        srand((unsigned) time(NULL));
+        int pos1,pos2;
+
+        pos1 = rand()%3;
+        pos2 = rand()%3;
+
+        cout << pos1 << pos2 << endl;
+        field->setField(getPlayerChar(),pos1,pos2);
     }
 };
 

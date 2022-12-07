@@ -6,7 +6,10 @@ using namespace std;
 
 PlayingField::PlayingField()
 {
-
+    cout << "Playing field made." << endl;
+    field[0] = "   ";
+    field[1] = "   ";
+    field[2] = "   ";
 }
 
 void PlayingField::printField (void)
@@ -20,7 +23,11 @@ void PlayingField::printField (void)
     }
 }
 
+void PlayingField::setField (unsigned char place, int pos1, int pos2)
+{
+    field[pos1][pos2] = place;
+}
+
 void PlayingField::checkTicTacToe (void)
 {
-
 }

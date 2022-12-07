@@ -6,6 +6,7 @@
 
 #include "humanplayer.h"
 #include "aiplayer.h"
+#include "playingfield.h"
 
 using namespace std;
 
@@ -30,6 +31,7 @@ public:
 private:
     Player* player1;
     Player* player2;
+    PlayingField field;
 };
 
 #endif // PLAYGAME_H

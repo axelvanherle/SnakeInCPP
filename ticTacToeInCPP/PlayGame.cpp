@@ -95,5 +95,12 @@ void PlayGame::getPlayerValues(void)
 
 void PlayGame::PlayTicTacToe(void)
 {
-
+    player1->placeChar(&field);
+    field.printField();
+    player1->placeChar(&field);
+    field.printField();
+    player1->placeChar(&field);
+    field.printField();
+    player1->placeChar(&field);
+    field.printField();
 }

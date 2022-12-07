@@ -12,7 +12,7 @@ class HumanPlayer : public Player
 {
 public:
     // This funtion will place the char on the playing field.
-    void placeChar(void)
+    void placeChar(PlayingField *field)
     {
 
     }
