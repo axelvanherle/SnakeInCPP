@@ -82,3 +82,4 @@ To download the latest compiled version for windows you can download the exe und
 - [ ] project working with hardware
 - [X] a nice extra that you think deserves a rating (things you put time into that are not rewarded by an item above)
     - Github Action to compile the program.
+
