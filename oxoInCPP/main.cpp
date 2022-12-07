@@ -13,6 +13,5 @@ int main()
     cout << "TicTacToe by Axel Vanherle." << endl;
 
     // Get the names of the players.
-    game.setPlayerValues();
     game.getPlayerValues();
 }
