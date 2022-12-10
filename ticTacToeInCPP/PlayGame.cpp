@@ -121,9 +121,19 @@ void PlayGame::getPlayerValues(void)
 
 void PlayGame::PlayTicTacToe(void)
 {
+    int counter = 0;
     srand((unsigned) time(NULL));
+
+    field.printField();
+
     for (int var = (rand()%2)+2; 1; ++var)
     {
+        if(counter == 9)
+        {
+            cout << "Game is a draw." << endl;
+            system("pause");
+            exit(1);
+        }
         if(var % 2 == 0)
         {
             cout << "Player 1, " << player1->getPlayerName() << " makes his move." << endl;
@@ -150,5 +160,6 @@ void PlayGame::PlayTicTacToe(void)
             }
             field.printField();
         }
+        counter++;
     }
 }
