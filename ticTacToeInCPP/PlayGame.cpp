@@ -27,6 +27,31 @@ void PlayGame::makePlayerObjects(void)
 {
     unsigned char var = 'n';
     int temp = 0;
+
+    cout << "How do i play?" << endl;
+    cout << "If its your turn, enter the position you want to place a char in." << endl;
+    cout << "For example, lets say i want to place a char on X." << endl;
+    cout << "     0   1   2" << endl;
+    cout << " 0     | X |   " << endl;
+    cout << "    -----------" << endl;
+    cout << " 1     |   |   " << endl;
+    cout << "    -----------" << endl;
+    cout << " 2     |   |   " << endl;
+    cout << "You have 3 horizontal rows, and 3 vertical rows." << endl;
+    cout << "Character X is on the 0th horizontal row, and on position 1." << endl;
+    cout << "So my input would be: 0,1." << endl;
+    cout << "Another example? Sure." << endl;
+    cout << "     0   1   2" << endl;
+    cout << " 0     |   |   " << endl;
+    cout << "    -----------" << endl;
+    cout << " 1     | X |   " << endl;
+    cout << "    -----------" << endl;
+    cout << " 2     |   |   " << endl;
+    cout << "Lets say i again want to place a char on position X." << endl;
+    cout << "Its on the 1st horizontal row, and the 1st positon vertically." << endl;
+    cout << "So my input would be: 1,1." << endl << endl << endl << endl;
+
+
     while(var != 'y')
     {
         cout << "Do you want the first player to be a human or AI?" << endl;
@@ -107,6 +132,7 @@ void PlayGame::PlayTicTacToe(void)
             {
                 cout << "Player 1 won! Congrats " << player1->getPlayerName() << "!" << endl;
                 field.printField();
+                system("pause");
                 exit(1);
             }
             field.printField();
@@ -119,6 +145,7 @@ void PlayGame::PlayTicTacToe(void)
             {
                 cout << "Player 2 won! Congrats " << player2->getPlayerName() << "!" << endl;
                 field.printField();
+                system("pause");
                 exit(1);
             }
             field.printField();
