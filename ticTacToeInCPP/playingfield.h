@@ -11,8 +11,8 @@ public:
     PlayingField();
 
     void printField (void);
-    void setField (unsigned char place, int pos1, int pos2);
-    void checkTicTacToe (void);
+    int setField (unsigned char place, int pos1, int pos2);
+    int checkTicTacToe (void);
 
 private:
     string field[3];

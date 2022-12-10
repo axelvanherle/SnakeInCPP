@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <cstdlib>
 #include "PlayGame.h"
 #include "playingfield.h"
 
@@ -95,12 +96,32 @@ void PlayGame::getPlayerValues(void)
 
 void PlayGame::PlayTicTacToe(void)
 {
-    player1->placeChar(&field);
-    field.printField();
-    player1->placeChar(&field);
-    field.printField();
-    player1->placeChar(&field);
-    field.printField();
-    player1->placeChar(&field);
-    field.printField();
+    srand((unsigned) time(NULL));
+    for (int var = (rand()%2)+2; 1; ++var)
+    {
+        if(var % 2 == 0)
+        {
+            cout << "Player 1, " << player1->getPlayerName() << " makes his move." << endl;
+            player1->placeChar(&field);
+            if (field.checkTicTacToe() == 0)
+            {
+                cout << "Player 1 won! Congrats " << player1->getPlayerName() << "!" << endl;
+                field.printField();
+                exit(1);
+            }
+            field.printField();
+        }
+        else
+        {
+            cout << "Player 2, " << player2->getPlayerName() << " makes his move." << endl;
+            player2->placeChar(&field);
+            if (field.checkTicTacToe() == 0)
+            {
+                cout << "Player 2 won! Congrats " << player2->getPlayerName() << "!" << endl;
+                field.printField();
+                exit(1);
+            }
+            field.printField();
+        }
+    }
 }

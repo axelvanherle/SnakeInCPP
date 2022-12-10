@@ -10,10 +10,6 @@ int main()
     // Make the game object.
     PlayGame game;
 
-    cout << "TicTacToe by Axel Vanherle." << endl;
-
-    // Get the names of the players.
-    game.getPlayerValues();
     game.PlayTicTacToe();
 
     return EXIT_SUCCESS;

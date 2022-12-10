@@ -23,11 +23,46 @@ void PlayingField::printField (void)
     }
 }
 
-void PlayingField::setField (unsigned char place, int pos1, int pos2)
+int PlayingField::setField (unsigned char place, int pos1, int pos2)
 {
-    field[pos1][pos2] = place;
+    if(field[pos1][pos2] == ' ')
+    {
+        field[pos1][pos2] = place;
+        return 0;
+    }
+    else
+    {
+        return -1;
+    }
 }
 
-void PlayingField::checkTicTacToe (void)
+int PlayingField::checkTicTacToe (void)
 {
+    // Check if horizontal tictactoe
+    if(((field[0][0] == field[0][1]) && (field[0][1] == field[0][2]) && (field[0][0] == field[0][2]) && field[0][1] != ' ')
+    || ((field[1][0] == field[1][1]) && (field[1][1] == field[1][2]) && (field[1][0] == field[1][2]) && field[1][1] != ' ')
+    || ((field[2][0] == field[2][1]) && (field[2][1] == field[2][2]) && (field[2][0] == field[2][2]) && field[2][1] != ' '))
+    {
+        return 0;
+        cout << "SUCCES HORIZONTAL" << endl;
+    }
+    // Check if vertical tictactoe
+    else if(((field[0][0] == field[1][0]) && (field[1][0] == field[2][0]) && (field[0][0] == field[2][0]) && field[1][0] != ' ')
+    || ((field[0][1] == field[1][1]) && (field[1][1] == field[2][1]) && (field[0][1] == field[2][1]) && field[1][1] != ' ')
+    || ((field[0][2] == field[1][2]) && (field[1][2] == field[2][2]) && (field[0][2] == field[2][2]) && field[1][2] != ' '))
+    {
+        return 0;
+        cout << "SUCCES VERTICAL" << endl;
+    }
+    // Check if cross tictactoe
+    else if((((field[0][0] == field[1][1]) && (field[1][1] == field[2][2]) && (field[0][0] == field[2][2])) && field[1][1] != ' ')
+    || (((field[0][2] == field[1][1]) && (field[1][1] == field[2][0]) && (field[0][2] == field[2][0])) && field[1][1] != ' '))
+    {
+        return 0;
+        cout << "SUCCES CROSS" << endl;
+    }
+    else
+    {
+        return 1;
+    }
 }

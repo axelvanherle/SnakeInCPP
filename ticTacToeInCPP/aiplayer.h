@@ -29,12 +29,21 @@ public:
     {
         srand((unsigned) time(NULL));
         int pos1,pos2;
+        int isFilled;
 
         pos1 = rand()%3;
         pos2 = rand()%3;
 
-        cout << pos1 << pos2 << endl;
-        field->setField(getPlayerChar(),pos1,pos2);
+        isFilled = field->setField(getPlayerChar(),pos1,pos2);
+        if(isFilled == -1)
+        {
+            while (isFilled == -1) {
+                pos1 = rand()%3;
+                pos2 = rand()%3;
+                isFilled = field->setField(getPlayerChar(),pos1,pos2);
+            }
+        }
+
     }
 };
 
