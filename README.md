@@ -45,7 +45,8 @@ To download the latest compiled version for windows you can download the exe und
 - [X] useful proven (dynamic) polymorphism
 - [ ] useful use of "this" (if code doesn't work without it)
 - [X] useful member function
-- [ ] default values in function definition
+- [X] default values in function definition
+    - setPlayerName
 - [X] useful member variable
 - [X] useful getters and setters for member variables
 - [X] correct use of inline function
@@ -61,7 +62,7 @@ To download the latest compiled version for windows you can download the exe und
 - [ ] at least 4 useful bool
 - [X] dynamic memory allocation (new)
 - [X] dynamic memory delete (delete)
-- [ ] 2 useful (modern) call-by-references
+- [X] 2 useful (modern) call-by-references
 - [X] useful string class usage
 - [ ] useful container class
 - [X] useful use of nullptr
