@@ -3,6 +3,8 @@
 #include <cstdlib>
 #include "PlayGame.h"
 #include "playingfield.h"
+#include "aiplayer.h"
+#include "humanplayer.h"
 
 // Create two player pointers, and call the makePlayerObjects fucntion. This asks the user what kind of players they want to create.
 PlayGame::PlayGame()
