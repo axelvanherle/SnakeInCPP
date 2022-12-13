@@ -4,18 +4,21 @@
 #include "PlayGame.h"
 #include "playingfield.h"
 
+// Create two player pointers, and call the makePlayerObjects fucntion. This asks the user what kind of players they want to create.
 PlayGame::PlayGame()
 {
     cout << "Game started." << endl;
     player1 = nullptr;
     player2 = nullptr;
     makePlayerObjects();
-    if(player1 == nullptr || player2 == nullptr)
+    // If player 1 or player 2 is a nullptr, the allocation in makePlayerObjects did not succeed, so we must exit.
+    if (player1 == nullptr || player2 == nullptr)
     {
-        exit (-1);
+        exit(-1);
     }
 }
 
+// Deallocate both players.
 PlayGame::~PlayGame()
 {
     delete player1;
@@ -28,6 +31,7 @@ void PlayGame::makePlayerObjects(void)
     unsigned char var = 'n';
     int temp = 0;
 
+    // Explination
     cout << "How do i play?" << endl;
     cout << "If its your turn, enter the position you want to place a char in." << endl;
     cout << "For example, lets say i want to place a char on X." << endl;
@@ -49,15 +53,19 @@ void PlayGame::makePlayerObjects(void)
     cout << " 2     |   |   " << endl;
     cout << "Lets say i again want to place a char on position X." << endl;
     cout << "Its on the 1st horizontal row, and the 1st positon vertically." << endl;
-    cout << "So my input would be: 1,1." << endl << endl << endl << endl;
+    cout << "So my input would be: 1,1." << endl
+         << endl
+         << endl
+         << endl;
 
-
-    while(var != 'y')
+    // Keep asking the user what players they want to make while "var" == 'n'.
+    while (var != 'y')
     {
         cout << "Do you want the first player to be a human or AI?" << endl;
-        cout << "[1] -> Human" << endl << "[2] -> AI" << endl;
+        cout << "[1] -> Human" << endl
+             << "[2] -> AI" << endl;
         cin >> temp;
-        if(temp == 1)
+        if (temp == 1)
         {
             player1 = new HumanPlayer();
             cout << "Created a human player." << endl;
@@ -75,9 +83,10 @@ void PlayGame::makePlayerObjects(void)
         }
 
         cout << "Do you want the second player to be a human or AI?" << endl;
-        cout << "[1] -> Human" << endl << "[2] -> AI" << endl;
+        cout << "[1] -> Human" << endl
+             << "[2] -> AI" << endl;
         cin >> temp;
-        if(temp == 1)
+        if (temp == 1)
         {
             player2 = new HumanPlayer();
             cout << "Created a human player." << endl;
@@ -100,7 +109,8 @@ void PlayGame::makePlayerObjects(void)
     }
 }
 
-void PlayGame::setPlayerValues(Player* newPlayer)
+// Sets the playername and char to the Player * given.
+void PlayGame::setPlayerValues(Player *newPlayer)
 {
     string newName;
     unsigned char newChar;
@@ -108,33 +118,40 @@ void PlayGame::setPlayerValues(Player* newPlayer)
     cout << "Player name?: ";
     cin >> newName;
     newPlayer->setPlayerName(newName);
-    cout << endl << "Speler char?: ";
+    cout << endl
+         << "Speler char?: ";
     cin >> newChar;
     newPlayer->setPlayerChar(newChar);
 }
 
+// Prints the name and char of a player.
 void PlayGame::getPlayerValues(void)
 {
-    cout << endl << "Player 1 name: " << player1->getPlayerName() << " char: " << player1->getPlayerChar() << endl;
-    cout << endl << "Player 2 name: " << player2->getPlayerName() << " char: " << player2->getPlayerChar() << endl;
+    cout << endl
+         << "Player 1 name: " << player1->getPlayerName() << " char: " << player1->getPlayerChar() << endl;
+    cout << endl
+         << "Player 2 name: " << player2->getPlayerName() << " char: " << player2->getPlayerChar() << endl;
 }
 
+// This is the "game", all functionality comes together here.
 void PlayGame::PlayTicTacToe(void)
 {
+    srand((unsigned)time(NULL));
     int counter = 0;
-    srand((unsigned) time(NULL));
 
     field.printField();
 
-    for (int var = (rand()%2)+2; 1; ++var)
+    // This decides who can begin playing. If var is even player1 can begin. Else player2.
+    // Rand % 2 gives 1 or 0. But we cant check if 1 or 0 is even or odd, so we do +2.
+    for (int var = (rand() % 2) + 2; 1; ++var)
     {
-        if(counter == 9)
+        if (counter == 9)
         {
             cout << "Game is a draw." << endl;
             system("pause");
             exit(1);
         }
-        if(var % 2 == 0)
+        if (var % 2 == 0)
         {
             cout << "Player 1, " << player1->getPlayerName() << " makes his move." << endl;
             player1->placeChar(&field);

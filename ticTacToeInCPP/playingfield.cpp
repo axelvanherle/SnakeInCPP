@@ -4,6 +4,7 @@
 #include "playingfield.h"
 using namespace std;
 
+// Initliazes the array to "   ".
 PlayingField::PlayingField()
 {
     cout << "Playing field made." << endl;
@@ -12,20 +13,25 @@ PlayingField::PlayingField()
     field[2] = "   ";
 }
 
-void PlayingField::printField (void)
+// Prints the current playing field.
+void PlayingField::printField(void)
 {
-    for (int i = 0; i < 3; ++i) {
+    for (int i = 0; i < 3; ++i)
+    {
         cout << field[i][0] << " | " << field[i][1] << " | " << field[i][2] << endl;
-        if(i < 2)
+        if (i < 2)
         {
             cout << "----------" << endl;
         }
     }
 }
 
-int PlayingField::setField (unsigned char place, int pos1, int pos2)
+// Allows the user to plays chars on the playing field.
+// Return 0 if placed, -1 if the spot is already filled.
+int PlayingField::setField(unsigned char place, int pos1, int pos2)
 {
-    if(field[pos1][pos2] == ' ')
+    // If the user attempts to place a char on a empty place we allow it, else we dont.
+    if (field[pos1][pos2] == ' ')
     {
         field[pos1][pos2] = place;
         return 0;
@@ -36,27 +42,23 @@ int PlayingField::setField (unsigned char place, int pos1, int pos2)
     }
 }
 
-int PlayingField::checkTicTacToe (void)
+// Checks if there is tic tac toe on the field.
+int PlayingField::checkTicTacToe(void)
 {
     // Check if horizontal tictactoe
-    if(((field[0][0] == field[0][1]) && (field[0][1] == field[0][2]) && (field[0][0] == field[0][2]) && field[0][1] != ' ')
-    || ((field[1][0] == field[1][1]) && (field[1][1] == field[1][2]) && (field[1][0] == field[1][2]) && field[1][1] != ' ')
-    || ((field[2][0] == field[2][1]) && (field[2][1] == field[2][2]) && (field[2][0] == field[2][2]) && field[2][1] != ' '))
+    if (((field[0][0] == field[0][1]) && (field[0][1] == field[0][2]) && (field[0][0] == field[0][2]) && field[0][1] != ' ') || ((field[1][0] == field[1][1]) && (field[1][1] == field[1][2]) && (field[1][0] == field[1][2]) && field[1][1] != ' ') || ((field[2][0] == field[2][1]) && (field[2][1] == field[2][2]) && (field[2][0] == field[2][2]) && field[2][1] != ' '))
     {
         return 0;
         cout << "SUCCES HORIZONTAL" << endl;
     }
     // Check if vertical tictactoe
-    else if(((field[0][0] == field[1][0]) && (field[1][0] == field[2][0]) && (field[0][0] == field[2][0]) && field[1][0] != ' ')
-    || ((field[0][1] == field[1][1]) && (field[1][1] == field[2][1]) && (field[0][1] == field[2][1]) && field[1][1] != ' ')
-    || ((field[0][2] == field[1][2]) && (field[1][2] == field[2][2]) && (field[0][2] == field[2][2]) && field[1][2] != ' '))
+    else if (((field[0][0] == field[1][0]) && (field[1][0] == field[2][0]) && (field[0][0] == field[2][0]) && field[1][0] != ' ') || ((field[0][1] == field[1][1]) && (field[1][1] == field[2][1]) && (field[0][1] == field[2][1]) && field[1][1] != ' ') || ((field[0][2] == field[1][2]) && (field[1][2] == field[2][2]) && (field[0][2] == field[2][2]) && field[1][2] != ' '))
     {
         return 0;
         cout << "SUCCES VERTICAL" << endl;
     }
     // Check if cross tictactoe
-    else if((((field[0][0] == field[1][1]) && (field[1][1] == field[2][2]) && (field[0][0] == field[2][2])) && field[1][1] != ' ')
-    || (((field[0][2] == field[1][1]) && (field[1][1] == field[2][0]) && (field[0][2] == field[2][0])) && field[1][1] != ' '))
+    else if ((((field[0][0] == field[1][1]) && (field[1][1] == field[2][2]) && (field[0][0] == field[2][2])) && field[1][1] != ' ') || (((field[0][2] == field[1][1]) && (field[1][1] == field[2][0]) && (field[0][2] == field[2][0])) && field[1][1] != ' '))
     {
         return 0;
         cout << "SUCCES CROSS" << endl;

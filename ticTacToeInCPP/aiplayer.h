@@ -2,8 +2,8 @@
 #define AIPLAYER_H
 
 /*
-* This class is an AI class. It does all its moves without userinput.
-*/
+ * This class is an AI class. It does all its moves without userinput.
+ */
 
 #include "player.h"
 #include "playingfield.h"
@@ -17,33 +17,33 @@ public:
     AIPlayer()
     {
         // Providing a seed value
-        srand((unsigned) time(NULL));
+        srand((unsigned)time(NULL));
 
         setPlayerName("AI Player");
 
-        //Set a random char.
-        setPlayerChar((rand() % 94 )+ 33);
+        // Set a random char.
+        setPlayerChar((rand() % 94) + 33);
     }
-    // This funtion will place the char on the playing field.
+    // This funtion places the char on the playing field.
     void placeChar(PlayingField *field)
     {
-        srand((unsigned) time(NULL));
-        int pos1,pos2;
+        srand((unsigned)time(NULL));
+        int pos1, pos2;
         int isFilled;
 
-        pos1 = rand()%3;
-        pos2 = rand()%3;
+        pos1 = rand() % 3;
+        pos2 = rand() % 3;
 
-        isFilled = field->setField(getPlayerChar(),pos1,pos2);
-        if(isFilled == -1)
+        isFilled = field->setField(getPlayerChar(), pos1, pos2);
+        if (isFilled == -1)
         {
-            while (isFilled == -1) {
-                pos1 = rand()%3;
-                pos2 = rand()%3;
-                isFilled = field->setField(getPlayerChar(),pos1,pos2);
+            while (isFilled == -1)
+            {
+                pos1 = rand() % 3;
+                pos2 = rand() % 3;
+                isFilled = field->setField(getPlayerChar(), pos1, pos2);
             }
         }
-
     }
 };
 

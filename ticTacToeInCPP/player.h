@@ -2,9 +2,8 @@
 #define PLAYER_H
 
 /*
-* This is the player class. Gives inheritance to the AI and Human class.
-*/
-
+ * This is the player class. Gives inheritance to the AI and Human class.
+ */
 
 #include <iostream>
 #include <string>
@@ -29,7 +28,7 @@ public:
     // Setter
     inline void setPlayerName(string newName)
     {
-       playerName = newName;
+        playerName = newName;
     }
 
     // Getter
