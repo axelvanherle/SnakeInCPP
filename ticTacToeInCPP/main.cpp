@@ -1,10 +1,9 @@
-#include <iostream>
-
 #include "PlayGame.h"
 
 int main()
 {
-    // Make the game object.
+    srand((unsigned)time(NULL));
+
     PlayGame game;
 
     game.PlayTicTacToe();

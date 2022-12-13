@@ -16,8 +16,6 @@ class AIPlayer : public Player
 public:
     AIPlayer()
     {
-        // Providing a seed value
-        srand((unsigned)time(NULL));
 
         setPlayerName("AI Player");
 
@@ -27,7 +25,6 @@ public:
     // This funtion places the char on the playing field.
     void placeChar(PlayingField *field)
     {
-        srand((unsigned)time(NULL));
         int pos1, pos2;
         int isFilled;
 

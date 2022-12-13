@@ -138,7 +138,6 @@ void PlayGame::getPlayerValues(void)
 // This is the "game", all functionality comes together here.
 void PlayGame::PlayTicTacToe(void)
 {
-    srand((unsigned)time(NULL));
     int counter = 0;
 
     field.printField();

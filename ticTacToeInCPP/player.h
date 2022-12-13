@@ -1,3 +1,4 @@
+
 #ifndef PLAYER_H
 #define PLAYER_H
 
@@ -26,7 +27,7 @@ public:
     }
 
     // Setter
-    inline void setPlayerName(string newName)
+    inline void setPlayerName(string newName = "iHaveNoName!")
     {
         playerName = newName;
     }
