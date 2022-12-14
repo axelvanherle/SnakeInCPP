@@ -76,8 +76,8 @@ For anything else, compile from scratch.
 - [ ] useful Qt class
 - [ ] useful use of signals/slots
 - [ ] test-driven development (= written test plan or unit tests)
-- [ ] bug ticket resolution (with pull request or commit message issue link and issue branch)
-- [ ] reporting a bug ticket on another project
+- [X] bug ticket resolution (with pull request or commit message issue link and issue branch)
+- [X] reporting a bug ticket on another project
 - [ ] use of a GUI
 - [ ] use of OpenGL or another 3D engine
 - [ ] useful use of an external library (not Qt)
