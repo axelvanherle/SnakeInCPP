@@ -32,6 +32,6 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: .build/
           asset_name: mything
-          tag: testing
+          tag: ${{ github.ref }}
           overwrite: true
           body: "This is my release text"
