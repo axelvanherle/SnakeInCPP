@@ -16,6 +16,7 @@ PlayGame::PlayGame()
     // If player 1 or player 2 is a nullptr, the allocation in makePlayerObjects did not succeed, so we must exit.
     if (player1 == nullptr || player2 == nullptr)
     {
+        cout << "Error allocating mem." << endl;
         exit(-1);
     }
 }
@@ -158,7 +159,7 @@ void PlayGame::PlayTicTacToe(void)
         {
             cout << "Game is a draw." << endl;
             system("pause");
-            exit(1);
+            break;
         }
         if (var % 2 == 0)
         {
@@ -169,7 +170,7 @@ void PlayGame::PlayTicTacToe(void)
                 cout << "Player 1 won! Congrats " << player1->getPlayerName() << "!" << endl;
                 field.printField();
                 system("pause");
-                exit(1);
+                break;
             }
             field.printField();
         }
@@ -182,7 +183,7 @@ void PlayGame::PlayTicTacToe(void)
                 cout << "Player 2 won! Congrats " << player2->getPlayerName() << "!" << endl;
                 field.printField();
                 system("pause");
-                exit(1);
+                break;
             }
             field.printField();
         }
