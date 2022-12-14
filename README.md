@@ -2,8 +2,6 @@
 
 This is tictactoe written for my cpp uni course.
 
-test
-
 ### How to run?
 
 For windows download the builded artifact.
