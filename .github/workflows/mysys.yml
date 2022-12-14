@@ -20,8 +20,10 @@ jobs:
           mkdir .build
           g++ ticTacToeInCPP/*.cpp -o .build/ticTacToeByAxel.exe
       - name: Get-DLL
-        run: ldd .build/*|grep -iv system32|grep -vi windows|grep -v :$  | cut -f2 -d\> | cut -f1 -d\( | tr \\ / |while read a; do ! [ -e ".build/`basename $a`" ] && cp -v "$a" .build/; done
+        run: |
+          # Written by Axel.
+          ldd .build/*|grep -iv system32|grep -vi windows|grep -v :$  | cut -f2 -d\> | cut -f1 -d\( | tr \\ / |while read a; do ! [ -e ".build/`basename $a`" ] && cp -v "$a" .build/; done
       - uses: actions/upload-artifact@v3
         with:
-          name: ticTacToeByAxel.exe
+          name: ticTacToeByAxel.zip
           path: .build/
