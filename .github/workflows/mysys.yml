@@ -1,6 +1,9 @@
+# Written by Axel V
 name: Build-Files
-on: [push, pull_request]
-# Written by Axel V.
+on:
+  push:
+    tags:
+      - '*'
 
 jobs:
   msys2-ucrt64:
