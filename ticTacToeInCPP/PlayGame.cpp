@@ -105,6 +105,14 @@ void PlayGame::makePlayerObjects(void)
             cout << "Invalid value. Created a AI player." << endl;
         }
 
+        unsigned char Check;
+
+        while(player1->getPlayerChar() == player2->getPlayerChar()) {
+                cout << "Impossible, player1 already uses this character!" << endl << "Please give another char:" << endl;
+                cin >> Check;
+                player2->setPlayerChar(Check);
+            }
+
         cout << "Players set. Continue? [y/n]: ";
         cin >> var;
         system("CLS");
