@@ -1,5 +1,7 @@
 # ticTacToeInCPP_task1
 
+test
+
 This is tictactoe written for my cpp uni course.
 
 ### How to run?
