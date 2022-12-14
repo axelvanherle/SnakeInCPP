@@ -1,4 +1,4 @@
-name: MSYS2
+name: Build-Files
 on: [push, pull_request]
 # Written by Axel V.
 
