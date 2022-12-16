@@ -6,6 +6,8 @@
 #include "aiplayer.h"
 #include "humanplayer.h"
 
+
+
 // Create two player pointers, and call the makePlayerObjects fucntion. This asks the user what kind of players they want to create.
 PlayGame::PlayGame()
 {
@@ -126,8 +128,11 @@ void PlayGame::setPlayerValues(Player *newPlayer)
     string newName;
     unsigned char newChar;
 
+
     cout << "Player name?: ";
-    cin >> newName;
+    //cin >> newName;
+    cin.ignore();
+    getline(cin,newName);
     newPlayer->setPlayerName(newName);
     cout << endl
          << "Speler char?: ";
