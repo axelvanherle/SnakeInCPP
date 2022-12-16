@@ -5,6 +5,7 @@ This is tictactoe written for my cpp uni course. Other contributors did a small 
 ### How to run?
 
 For windows download the builded artifact.
+
 For anything else, compile from scratch.
 
 ### Points
