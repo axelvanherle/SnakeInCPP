@@ -112,13 +112,24 @@ void PlayGame::makePlayerObjects(void)
             cout << "Invalid value. Created a AI player." << endl;
         }
 
-        unsigned char Check;
-
-        while(player1->getPlayerChar() == player2->getPlayerChar()) {
+        try
+        {
+            if (player1->getPlayerChar() == player2->getPlayerChar())
+            {
+                throw runtime_error("Same name.");
+            }
+        }
+        catch (runtime_error& err)
+        {
+            cerr << err.what() << endl;
+            unsigned char Check;
+            while(player1->getPlayerChar() == player2->getPlayerChar())
+            {
                 cout << "Impossible, player1 already uses this character!" << endl << "Please give another char:" << endl;
                 cin >> Check;
                 player2->setPlayerChar(Check);
             }
+        }
 
         cout << "Players set. Continue? [y/n]: ";
         cin >> var;
@@ -131,7 +142,6 @@ void PlayGame::setPlayerValues(Player *newPlayer)
 {
     string newName;
     unsigned char newChar;
-
 
     cout << "Player name?: ";
     //cin >> newName;

@@ -9,7 +9,7 @@ class PlayingField
 {
 public:
     // Initliazes the array to "   ".
-    PlayingField();
+    PlayingField(void);
 
     // Prints the current playing field.
     void printField(void);
