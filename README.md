@@ -69,7 +69,7 @@ For windows you can download the builded artifact, unzip and run the exe. (DLL's
     - PlayGame::makePlayerObjects, player.h
 - [ ] at least 4 useful const references for variables
 - [ ] at least 4 useful const references for functions
-- [ ] at least 4 useful bool
+- [X] at least 4 useful bool
 - [X] dynamic memory allocation (new)
 - [X] dynamic memory delete (delete)
 - [X] 2 useful (modern) call-by-references
