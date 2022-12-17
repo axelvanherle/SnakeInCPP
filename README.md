@@ -42,7 +42,7 @@ For anything else, compile from scratch.
 - [ ] at least 2 copy constructors
 - [X] at least 2 destructors
     - Player and PlayGame class.
-- [ ] member initialization in constructors (the stuff after a colon)
+- [X] member initialization in constructors (the stuff after a colon)
 - [ ] constructor forwarding
 - [X] useful proven (dynamic) polymorphism
 - [ ] useful use of "this" (if code doesn't work without it)
