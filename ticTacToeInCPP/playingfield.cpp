@@ -30,7 +30,8 @@ void PlayingField::printField(void)
 // Prints the current playing field.
 string PlayingField::returnPrintField(void)
 {
-    std::stringstream buffer;
+    stringstream buffer;
+
     for (int i = 0; i < 3; ++i)
     {
         buffer << field[i][0] << " | " << field[i][1] << " | " << field[i][2] << endl;
