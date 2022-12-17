@@ -6,7 +6,13 @@ Other contributors did a small bug fix, doing this resulted in extra points for 
 
 ### How to run?
 
-Pull the docker container from the packages tab, currently support it on linux/amd64,linux/arm64 and linux/arm/v7. This should work on almost all machines, but if it doesnt you can make a issue for whatever architecture you need.
+#### Docker
+
+Pull the docker container from the packages tab, currently support it on linux/amd64,linux/arm64 and linux/arm/v7. This should work on almost all machines, but if it doesnt you can make a issue for whatever architecture you need. 
+
+Showcase -> https://www.youtube.com/watch?v=4sYgRcMa_cc
+
+#### Windows
 
 For windows you can download the builded artifact, unzip and run the exe. (DLL's **NEED** to be in the same folder as the executable).
 
