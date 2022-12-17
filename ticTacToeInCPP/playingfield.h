@@ -15,9 +15,9 @@ public:
     // Returns the playing field as a string.
     string returnPrintField(void);
     // Allows the user to plays chars on the playing field.
-    int setField(unsigned char place, int pos1, int pos2);
+    bool setField(unsigned char place, int pos1, int pos2);
     // Checks if there is tic tac toe on the field.
-    int checkTicTacToe(void);
+    bool checkTicTacToe(void);
 
 private:
     // Used to store the field.

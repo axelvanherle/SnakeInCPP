@@ -24,15 +24,15 @@ public:
     void placeChar(PlayingField *field)
     {
         int pos1, pos2;
-        int isFilled;
+        bool isFilled;
 
         pos1 = rand() % 3;
         pos2 = rand() % 3;
 
         isFilled = field->setField(getPlayerChar(), pos1, pos2);
-        if (isFilled == -1)
+        if (isFilled == false)
         {
-            while (isFilled == -1)
+            while (isFilled == false)
             {
                 pos1 = rand() % 3;
                 pos2 = rand() % 3;

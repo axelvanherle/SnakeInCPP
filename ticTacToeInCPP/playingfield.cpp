@@ -46,40 +46,40 @@ string PlayingField::returnPrintField(void)
 
 // Allows the user to plays chars on the playing field.
 // Return 0 if placed, -1 if the spot is already filled.
-int PlayingField::setField(unsigned char place, int pos1, int pos2)
+bool PlayingField::setField(unsigned char place, int pos1, int pos2)
 {
     // If the user attempts to place a char on a empty place we allow it, else we dont.
     if (field[pos1][pos2] == ' ')
     {
         field[pos1][pos2] = place;
-        return 0;
+        return true;
     }
     else
     {
-        return -1;
+        return false;
     }
 }
 
 // Checks if there is tic tac toe on the field.
-int PlayingField::checkTicTacToe(void)
+bool PlayingField::checkTicTacToe(void)
 {
     // Check if horizontal tictactoe
     if (((field[0][0] == field[0][1]) && (field[0][1] == field[0][2]) && (field[0][0] == field[0][2]) && field[0][1] != ' ') || ((field[1][0] == field[1][1]) && (field[1][1] == field[1][2]) && (field[1][0] == field[1][2]) && field[1][1] != ' ') || ((field[2][0] == field[2][1]) && (field[2][1] == field[2][2]) && (field[2][0] == field[2][2]) && field[2][1] != ' '))
     {
-        return 0;
+        return true;
     }
     // Check if vertical tictactoe
     else if (((field[0][0] == field[1][0]) && (field[1][0] == field[2][0]) && (field[0][0] == field[2][0]) && field[1][0] != ' ') || ((field[0][1] == field[1][1]) && (field[1][1] == field[2][1]) && (field[0][1] == field[2][1]) && field[1][1] != ' ') || ((field[0][2] == field[1][2]) && (field[1][2] == field[2][2]) && (field[0][2] == field[2][2]) && field[1][2] != ' '))
     {
-        return 0;
+        return true;
     }
     // Check if cross tictactoe
     else if ((((field[0][0] == field[1][1]) && (field[1][1] == field[2][2]) && (field[0][0] == field[2][2])) && field[1][1] != ' ') || (((field[0][2] == field[1][1]) && (field[1][1] == field[2][0]) && (field[0][2] == field[2][0])) && field[1][1] != ' '))
     {
-        return 0;
+        return true;
     }
     else
     {
-        return 1;
+        return false;
     }
 }

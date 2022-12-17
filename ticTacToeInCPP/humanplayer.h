@@ -15,7 +15,7 @@ public:
     void placeChar(PlayingField *field)
     {
         int pos1, pos2 = 0;
-        int isFilled;
+        bool isFilled;
 
         cout << "Enter the first position you want to place the char at: ";
         cin >> pos1;
@@ -23,9 +23,9 @@ public:
         cin >> pos2;
 
         isFilled = field->setField(getPlayerChar(), pos1, pos2);
-        if (isFilled == -1)
+        if (isFilled == false)
         {
-            while (isFilled == -1)
+            while (isFilled == false)
             {
                 cout << "Enter the first position you want to place the char at: ";
                 cin >> pos1;
