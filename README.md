@@ -1,6 +1,8 @@
 # ticTacToeInCPP_task1
 
-This is tictactoe written for my cpp uni course. Other contributors did a small bug fix, doing this resulted in extra points for them.
+This is tictactoe written for my cpp uni course. 
+
+Other contributors did a small bug fix, doing this resulted in extra points for them.
 
 ### How to run?
 
@@ -38,11 +40,11 @@ For anything else, compile from scratch.
 **OOP**
 - [X] at least 2 standard constructors
     - Player and PlayGame class.
-- [ ] at least 2 parameterized constructors
+- [X] at least 2 parameterized constructors
 - [ ] at least 2 copy constructors
 - [X] at least 2 destructors
     - Player and PlayGame class.
-- [ ] member initialization in constructors (the stuff after a colon)
+- [X] member initialization in constructors (the stuff after a colon)
 - [ ] constructor forwarding
 - [X] useful proven (dynamic) polymorphism
 - [ ] useful use of "this" (if code doesn't work without it)
