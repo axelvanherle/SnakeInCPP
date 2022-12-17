@@ -14,7 +14,7 @@ class PlayGame
 {
 public:
     // Standard constructor
-    PlayGame();
+    PlayGame(string boardName);
     // Deconstructor
     ~PlayGame();
 

@@ -4,7 +4,7 @@ int main()
 {
     srand((unsigned)time(NULL));
 
-    PlayGame game;
+    PlayGame game("board.txt");
 
     game.PlayTicTacToe();
 

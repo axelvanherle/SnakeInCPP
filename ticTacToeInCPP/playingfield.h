@@ -10,7 +10,6 @@ class PlayingField
 public:
     // Initliazes the array to "   ".
     PlayingField(void);
-
     // Prints the current playing field.
     void printField(void);
     // Returns the playing field as a string.

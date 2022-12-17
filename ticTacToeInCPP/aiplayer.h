@@ -14,11 +14,9 @@ using namespace std;
 class AIPlayer : public Player
 {
 public:
-    AIPlayer()
+    AIPlayer(string name)
     {
-
-        setPlayerName("AI Player");
-
+        setPlayerName(name);
         // Set a random char.
         setPlayerChar((rand() % 94) + 33);
     }

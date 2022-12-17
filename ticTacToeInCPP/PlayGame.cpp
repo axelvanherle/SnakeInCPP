@@ -7,10 +7,10 @@
 #include "humanplayer.h"
 
 // Create two player pointers, and call the makePlayerObjects fucntion. This asks the user what kind of players they want to create.
-PlayGame::PlayGame()
+PlayGame::PlayGame(string boardName)
 {
     // Open the file
-    MyFile.open("board.txt");
+    MyFile.open(boardName);
 
     cout << "Game started." << endl;
     player1 = nullptr;
@@ -82,12 +82,12 @@ void PlayGame::makePlayerObjects(void)
         }
         else if (temp == 2)
         {
-            player1 = new AIPlayer();
+            player1 = new AIPlayer("AI Player");
             cout << "Created a AI player." << endl;
         }
         else
         {
-            player1 = new AIPlayer();
+            player1 = new AIPlayer("AI Player");
             cout << "Invalid value. Created a AI player." << endl;
         }
 
@@ -103,12 +103,12 @@ void PlayGame::makePlayerObjects(void)
         }
         else if (temp == 2)
         {
-            player2 = new AIPlayer();
+            player2 = new AIPlayer("AI Player");
             cout << "Created a AI player." << endl;
         }
         else
         {
-            player2 = new AIPlayer();
+            player2 = new AIPlayer("AI Player");
             cout << "Invalid value. Created a AI player." << endl;
         }
 
