@@ -14,6 +14,6 @@ jobs:
         with:
           username: axelvanherle
           password: ${{ secrets.GITHUB_TOKEN }}
-          registry: docker.pkg.github.com
+          registry: https://ghcr.io
           repository: axelvanherle/ticTacToeInCPP_task1
           tag_with_sha: true
