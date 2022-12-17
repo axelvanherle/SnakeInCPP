@@ -38,7 +38,7 @@ For anything else, compile from scratch.
 **OOP**
 - [X] at least 2 standard constructors
     - Player and PlayGame class.
-- [ ] at least 2 parameterized constructors
+- [X] at least 2 parameterized constructors
 - [ ] at least 2 copy constructors
 - [X] at least 2 destructors
     - Player and PlayGame class.
