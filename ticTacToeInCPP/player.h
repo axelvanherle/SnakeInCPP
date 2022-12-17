@@ -12,6 +12,8 @@
 
 using namespace std;
 
+namespace AxelTTT {
+
 class Player
 {
 public:
@@ -57,5 +59,6 @@ private:
     string playerName;
     unsigned char playerSymbol;
 };
+}
 
 #endif // PLAYER_H

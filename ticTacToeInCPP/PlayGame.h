@@ -10,6 +10,8 @@
 
 using namespace std;
 
+namespace AxelTTT {
+
 class PlayGame
 {
 public:
@@ -37,5 +39,5 @@ private:
     Player *player2;
     PlayingField field;
 };
-
+}
 #endif // PLAYGAME_H

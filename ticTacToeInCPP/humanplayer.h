@@ -7,6 +7,8 @@
 
 #include "player.h"
 
+namespace AxelTTT {
+
 // Inherit from the player class.
 class HumanPlayer : public Player
 {
@@ -36,5 +38,7 @@ public:
         }
     }
 };
+
+}
 
 #endif // HUMANPLAYER_H

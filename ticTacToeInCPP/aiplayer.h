@@ -8,6 +8,9 @@
 #include "player.h"
 #include "playingfield.h"
 #include <cstdlib>
+
+namespace AxelTTT {
+
 using namespace std;
 
 // Inherit from the player class.
@@ -41,5 +44,6 @@ public:
         }
     }
 };
-
+}
 #endif // AIPLAYER_H
+

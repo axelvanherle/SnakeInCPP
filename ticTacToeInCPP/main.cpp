@@ -4,7 +4,7 @@ int main()
 {
     srand((unsigned)time(NULL));
 
-    PlayGame game("board.txt");
+    AxelTTT::PlayGame game("board.txt");
 
     game.PlayTicTacToe();
 

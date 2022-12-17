@@ -5,6 +5,8 @@
 
 using namespace std;
 
+namespace AxelTTT {
+
 class PlayingField
 {
 public:
@@ -23,5 +25,5 @@ private:
     // Used to store the field.
     string field[3];
 };
-
+}
 #endif // PLAYINGFIELD_H

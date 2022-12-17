@@ -3,7 +3,10 @@
 #include <cstring>
 #include <sstream>
 #include "playingfield.h"
+
 using namespace std;
+
+namespace AxelTTT {
 
 // Initliazes the array to "   ".
 PlayingField::PlayingField()
@@ -82,4 +85,5 @@ bool PlayingField::checkTicTacToe(void)
     {
         return false;
     }
+}
 }
