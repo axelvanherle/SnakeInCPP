@@ -15,5 +15,5 @@ jobs:
           username: axelvanherle
           password: ${{ secrets.GITHUB_TOKEN }}
           registry: https://ghcr.io
-          repository: axelvanherle/ticTacToeInCPP_task1
+          repository: axelvanherle/ticTacToeInCPP_task1/test
           tag_with_sha: true
