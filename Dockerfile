@@ -6,5 +6,5 @@ RUN apt-get update && apt-get -y --no-install-recommends install \
     cmake \
     gdb \
     wget
-RUN g++ ticTacToeInCPP/*.cpp -o .build/ticTacToeByAxel.exe
+RUN g++ ticTacToeInCPP/*.cpp -o ticTacToe
 ENTRYPOINT ["./ticTacToe"]
