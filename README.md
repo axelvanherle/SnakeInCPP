@@ -64,7 +64,7 @@ For windows you can download the builded artifact, unzip and run the exe. (DLL's
 - [ ] useful friend function or class
 
 **C++**
-- [ ] everything in one or more custom namespaces
+- [X] everything in one or more custom namespaces
 - [X] 2 useful unsigned chars or other better use of memory-efficient type
     - PlayGame::makePlayerObjects, player.h
 - [ ] at least 4 useful const references for variables
