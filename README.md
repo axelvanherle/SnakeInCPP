@@ -8,6 +8,8 @@ Other contributors did a small bug fix, doing this resulted in extra points for 
 
 #### Docker
 
+You must run with the -it flag.
+
 Pull the docker container from the packages tab, currently support it on linux/amd64,linux/arm64 and linux/arm/v7. This should work on almost all machines, but if it doesnt you can make a issue for whatever architecture you need. 
 
 Showcase -> https://www.youtube.com/watch?v=4sYgRcMa_cc
