@@ -41,3 +41,4 @@ jobs:
           tags: |
             axelvanherle/tictactoe:latest
             axelvanherle/tictactoe:1.0.0
+            ghcr.io/axelvanherle/tictactoe:latest
