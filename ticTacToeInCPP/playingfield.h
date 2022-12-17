@@ -13,6 +13,8 @@ public:
 
     // Prints the current playing field.
     void printField(void);
+    // Returns the playing field as a string.
+    string returnPrintField(void);
     // Allows the user to plays chars on the playing field.
     int setField(unsigned char place, int pos1, int pos2);
     // Checks if there is tic tac toe on the field.

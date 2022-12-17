@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <cstring>
+#include <sstream>
 #include "playingfield.h"
 using namespace std;
 
@@ -24,6 +25,22 @@ void PlayingField::printField(void)
             cout << "----------" << endl;
         }
     }
+}
+
+// Prints the current playing field.
+string PlayingField::returnPrintField(void)
+{
+    std::stringstream buffer;
+    for (int i = 0; i < 3; ++i)
+    {
+        buffer << field[i][0] << " | " << field[i][1] << " | " << field[i][2] << endl;
+        if (i < 2)
+        {
+            buffer << "----------" << endl;
+        }
+    }
+
+    return buffer.str();
 }
 
 // Allows the user to plays chars on the playing field.

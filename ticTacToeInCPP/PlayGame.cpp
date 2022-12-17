@@ -9,6 +9,9 @@
 // Create two player pointers, and call the makePlayerObjects fucntion. This asks the user what kind of players they want to create.
 PlayGame::PlayGame()
 {
+    // Open the file
+    MyFile.open("board.txt");
+
     cout << "Game started." << endl;
     player1 = nullptr;
     player2 = nullptr;
@@ -24,6 +27,9 @@ PlayGame::PlayGame()
 // Deallocate both players.
 PlayGame::~PlayGame()
 {
+    // Close the file
+    MyFile.close();
+
     delete player1;
     delete player2;
     cout << "Game ended. Thanks for playing!" << endl;
@@ -151,16 +157,21 @@ void PlayGame::getPlayerValues(void)
 void PlayGame::PlayTicTacToe(void)
 {
     int counter = 0;
-
+    cout << player1->getPlayerName() << " VS " << player2->getPlayerName() << " may the best man win!" << endl;
+    MyFile << player1->getPlayerName() << " VS " << player2->getPlayerName() << " may the best man win!" << endl;
     field.printField();
 
     // This decides who can begin playing. If var is even player1 can begin. Else player2.
     // Rand % 2 gives 1 or 0. But we cant check if 1 or 0 is even or odd, so we do +2.
     for (int var = (rand() % 2) + 2; 1; ++var)
     {
+        MyFile << "Turn " << counter << endl;
+        saveField();
+
         if (counter == 9)
         {
             cout << "Game is a draw." << endl;
+            MyFile << "Game is a draw." << endl;
             system("pause");
             break;
         }
@@ -170,8 +181,10 @@ void PlayGame::PlayTicTacToe(void)
             player1->placeChar(&field);
             if (field.checkTicTacToe() == 0)
             {
+                MyFile << "Player 1 won! Congrats " << player1->getPlayerName() << "!" << endl;
                 cout << "Player 1 won! Congrats " << player1->getPlayerName() << "!" << endl;
                 field.printField();
+                saveField();
                 system("pause");
                 break;
             }
@@ -183,13 +196,29 @@ void PlayGame::PlayTicTacToe(void)
             player2->placeChar(&field);
             if (field.checkTicTacToe() == 0)
             {
+                MyFile << "Player 2 won! Congrats " << player2->getPlayerName() << "!" << endl;
                 cout << "Player 2 won! Congrats " << player2->getPlayerName() << "!" << endl;
                 field.printField();
+                saveField();
                 system("pause");
                 break;
             }
             field.printField();
         }
         counter++;
+    }
+}
+
+void PlayGame::saveField()
+{
+    if(!MyFile)
+    {
+        cout << "Error making a output file to save the board." << endl;
+    }
+
+    else
+    {
+        MyFile << field.returnPrintField();
+        MyFile << endl;
     }
 }

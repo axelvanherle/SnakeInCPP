@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <fstream>
 
 #include "player.h"
 #include "playingfield.h"
@@ -27,7 +28,11 @@ public:
     // Play the game
     void PlayTicTacToe(void);
 
+    // Saves the field to a file.
+    void saveField(void);
+
 private:
+    ofstream MyFile;
     Player *player1;
     Player *player2;
     PlayingField field;
