@@ -69,7 +69,7 @@ For anything else, compile from scratch.
 - [ ] useful container class
 - [X] useful use of nullptr
 - [X] useful use of (modern) file I/O
-- [ ] useful exception handling
+- [X] useful exception handling
 - [ ] useful use of lambda function
 - [ ] useful use of threads
 
