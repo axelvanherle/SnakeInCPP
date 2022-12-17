@@ -1,19 +1,45 @@
-name: Publish to Docker
+name: ci
+
 on:
   push:
     branches:
-      - main
+      - "main"
+
 jobs:
-  publish:
-    runs-on: ubuntu-latest 
+  docker:
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      # Add your test steps here if needed...
-      - name: Build container
-        uses: docker/build-push-action@v1
+      -
+        name: Checkout
+        uses: actions/checkout@v3
+      -
+        name: Set up QEMU
+        uses: docker/setup-qemu-action@v2
+      -
+        name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+      -
+        name: Login to Docker Hub
+        uses: docker/login-action@v2
         with:
-          username: axelvanherle
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      -
+        name: Login to GitHub Container Registry
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
-          registry: https://ghcr.io
-          repository: axelvanherle/ticTacToeInCPP_task1/test
-          tag_with_sha: true
+      -
+        name: Build and push
+        uses: docker/build-push-action@v3
+        with:
+          context: .
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: |
+            user/app:latest
+            user/app:1.0.0
+            ghcr.io/user/app:latest
+            ghcr.io/user/app:1.0.0
