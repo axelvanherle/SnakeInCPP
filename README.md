@@ -1,7 +1,5 @@
 # ticTacToeInCPP_task1
 
-test
-
 This is tictactoe written for my cpp uni course. 
 
 Other contributors did a small bug fix, doing this resulted in extra points for them.
