@@ -76,4 +76,5 @@
 - [X] a nice extra that you think deserves a rating (things you put time into that are not rewarded by an item above)
     - Github Action to compile the program.
     - Many DevOps improvements
+    - Including a few others
 
