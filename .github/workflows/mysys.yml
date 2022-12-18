@@ -1,5 +1,5 @@
 # Written by Axel V
-name: Build-Files
+name: build-windows-artifact
 on: push
 
 jobs:
@@ -17,7 +17,6 @@ jobs:
           install: git mingw-w64-ucrt-x86_64-gcc mingw-w64-ucrt-x86_64-libc++
       - name: CI-Build
         run: |
-          echo 'Running in MSYS2!'
           mkdir .build
           g++ ticTacToeInCPP/*.cpp -o .build/ticTacToeByAxel.exe
       - name: Get-DLL
