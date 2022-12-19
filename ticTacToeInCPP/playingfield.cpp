@@ -6,84 +6,85 @@
 
 using namespace std;
 
-namespace AxelTTT {
-
-// Initliazes the array to "   ".
-PlayingField::PlayingField()
+namespace AxelTTT
 {
-    cout << "Playing field made." << endl;
-    field[0] = "   ";
-    field[1] = "   ";
-    field[2] = "   ";
-}
 
-// Prints the current playing field.
-void PlayingField::printField(void)
-{
-    for (int i = 0; i < 3; ++i)
+    // Initliazes the array to "   ".
+    PlayingField::PlayingField()
     {
-        cout << field[i][0] << " | " << field[i][1] << " | " << field[i][2] << endl;
-        if (i < 2)
-        {
-            cout << "----------" << endl;
-        }
+        cout << "Playing field made." << endl;
+        field[0] = "   ";
+        field[1] = "   ";
+        field[2] = "   ";
     }
-}
 
-// Prints the current playing field.
-string PlayingField::returnPrintField(void)
-{
-    stringstream buffer;
-
-    for (int i = 0; i < 3; ++i)
+    // Prints the current playing field.
+    void PlayingField::printField(void)
     {
-        buffer << field[i][0] << " | " << field[i][1] << " | " << field[i][2] << endl;
-        if (i < 2)
+        for (int i = 0; i < 3; ++i)
         {
-            buffer << "----------" << endl;
+            cout << field[i][0] << " | " << field[i][1] << " | " << field[i][2] << endl;
+            if (i < 2)
+            {
+                cout << "----------" << endl;
+            }
         }
     }
 
-    return buffer.str();
-}
+    // Prints the current playing field.
+    string PlayingField::returnPrintField(void)
+    {
+        stringstream buffer;
 
-// Allows the user to plays chars on the playing field.
-// Return 0 if placed, -1 if the spot is already filled.
-bool PlayingField::setField(unsigned char place, int pos1, int pos2)
-{
-    // If the user attempts to place a char on a empty place we allow it, else we dont.
-    if (field[pos1][pos2] == ' ')
-    {
-        field[pos1][pos2] = place;
-        return true;
-    }
-    else
-    {
-        return false;
-    }
-}
+        for (int i = 0; i < 3; ++i)
+        {
+            buffer << field[i][0] << " | " << field[i][1] << " | " << field[i][2] << endl;
+            if (i < 2)
+            {
+                buffer << "----------" << endl;
+            }
+        }
 
-// Checks if there is tic tac toe on the field.
-bool PlayingField::checkTicTacToe(void)
-{
-    // Check if horizontal tictactoe
-    if (((field[0][0] == field[0][1]) && (field[0][1] == field[0][2]) && (field[0][0] == field[0][2]) && field[0][1] != ' ') || ((field[1][0] == field[1][1]) && (field[1][1] == field[1][2]) && (field[1][0] == field[1][2]) && field[1][1] != ' ') || ((field[2][0] == field[2][1]) && (field[2][1] == field[2][2]) && (field[2][0] == field[2][2]) && field[2][1] != ' '))
-    {
-        return true;
+        return buffer.str();
     }
-    // Check if vertical tictactoe
-    else if (((field[0][0] == field[1][0]) && (field[1][0] == field[2][0]) && (field[0][0] == field[2][0]) && field[1][0] != ' ') || ((field[0][1] == field[1][1]) && (field[1][1] == field[2][1]) && (field[0][1] == field[2][1]) && field[1][1] != ' ') || ((field[0][2] == field[1][2]) && (field[1][2] == field[2][2]) && (field[0][2] == field[2][2]) && field[1][2] != ' '))
+
+    // Allows the user to plays chars on the playing field.
+    // Return 0 if placed, -1 if the spot is already filled.
+    bool PlayingField::setField(unsigned char place, int pos1, int pos2)
     {
-        return true;
+        // If the user attempts to place a char on a empty place we allow it, else we dont.
+        if (field[pos1][pos2] == ' ')
+        {
+            field[pos1][pos2] = place;
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
-    // Check if cross tictactoe
-    else if ((((field[0][0] == field[1][1]) && (field[1][1] == field[2][2]) && (field[0][0] == field[2][2])) && field[1][1] != ' ') || (((field[0][2] == field[1][1]) && (field[1][1] == field[2][0]) && (field[0][2] == field[2][0])) && field[1][1] != ' '))
+
+    // Checks if there is tic tac toe on the field.
+    bool PlayingField::checkTicTacToe(void)
     {
-        return true;
+        // Check if horizontal tictactoe
+        if (((field[0][0] == field[0][1]) && (field[0][1] == field[0][2]) && (field[0][0] == field[0][2]) && field[0][1] != ' ') || ((field[1][0] == field[1][1]) && (field[1][1] == field[1][2]) && (field[1][0] == field[1][2]) && field[1][1] != ' ') || ((field[2][0] == field[2][1]) && (field[2][1] == field[2][2]) && (field[2][0] == field[2][2]) && field[2][1] != ' '))
+        {
+            return true;
+        }
+        // Check if vertical tictactoe
+        else if (((field[0][0] == field[1][0]) && (field[1][0] == field[2][0]) && (field[0][0] == field[2][0]) && field[1][0] != ' ') || ((field[0][1] == field[1][1]) && (field[1][1] == field[2][1]) && (field[0][1] == field[2][1]) && field[1][1] != ' ') || ((field[0][2] == field[1][2]) && (field[1][2] == field[2][2]) && (field[0][2] == field[2][2]) && field[1][2] != ' '))
+        {
+            return true;
+        }
+        // Check if cross tictactoe
+        else if ((((field[0][0] == field[1][1]) && (field[1][1] == field[2][2]) && (field[0][0] == field[2][2])) && field[1][1] != ' ') || (((field[0][2] == field[1][1]) && (field[1][1] == field[2][0]) && (field[0][2] == field[2][0])) && field[1][1] != ' '))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
-    else
-    {
-        return false;
-    }
-}
 }

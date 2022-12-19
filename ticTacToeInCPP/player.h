@@ -12,53 +12,54 @@
 
 using namespace std;
 
-namespace AxelTTT {
-
-class Player
+namespace AxelTTT
 {
-public:
-    // Standard constructor
-    Player()
+
+    class Player
     {
-        cout << "Player object made" << endl;
-    }
+    public:
+        // Standard constructor
+        Player()
+        {
+            cout << "Player object made" << endl;
+        }
 
-    virtual ~Player()
-    {
-        cout << "Player object destroyed." << endl;
-    }
+        virtual ~Player()
+        {
+            cout << "Player object destroyed." << endl;
+        }
 
-    // Setter
-    inline void setPlayerName(string newName = "iHaveNoName!")
-    {
-        playerName = newName;
-    }
+        // Setter
+        inline void setPlayerName(string newName = "iHaveNoName!")
+        {
+            playerName = newName;
+        }
 
-    // Getter
-    inline string getPlayerName(void)
-    {
-        return playerName;
-    }
+        // Getter
+        inline string getPlayerName(void)
+        {
+            return playerName;
+        }
 
-    // Setter
-    inline void setPlayerChar(char newChar)
-    {
-        playerSymbol = newChar;
-    }
+        // Setter
+        inline void setPlayerChar(char newChar)
+        {
+            playerSymbol = newChar;
+        }
 
-    // Getter
-    inline char getPlayerChar(void)
-    {
-        return playerSymbol;
-    }
+        // Getter
+        inline char getPlayerChar(void)
+        {
+            return playerSymbol;
+        }
 
-    // Virtual function that AI and Human class can overwrite.
-    virtual void placeChar(PlayingField *field) = 0;
+        // Virtual function that AI and Human class can overwrite.
+        virtual void placeChar(PlayingField *field) = 0;
 
-private:
-    string playerName;
-    unsigned char playerSymbol;
-};
+    private:
+        string playerName;
+        unsigned char playerSymbol;
+    };
 }
 
 #endif // PLAYER_H

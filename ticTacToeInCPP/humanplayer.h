@@ -7,37 +7,38 @@
 
 #include "player.h"
 
-namespace AxelTTT {
-
-// Inherit from the player class.
-class HumanPlayer : public Player
+namespace AxelTTT
 {
-public:
-    // This funtion places the char on the playing field.
-    void placeChar(PlayingField *field)
+
+    // Inherit from the player class.
+    class HumanPlayer : public Player
     {
-        int pos1, pos2 = 0;
-        bool isFilled;
-
-        cout << "Enter the first position you want to place the char at: ";
-        cin >> pos1;
-        cout << "Enter the second position you want to place the char at: ";
-        cin >> pos2;
-
-        isFilled = field->setField(getPlayerChar(), pos1, pos2);
-        if (isFilled == false)
+    public:
+        // This funtion places the char on the playing field.
+        void placeChar(PlayingField *field)
         {
-            while (isFilled == false)
+            int pos1, pos2 = 0;
+            bool isFilled;
+
+            cout << "Enter the first position you want to place the char at: ";
+            cin >> pos1;
+            cout << "Enter the second position you want to place the char at: ";
+            cin >> pos2;
+
+            isFilled = field->setField(getPlayerChar(), pos1, pos2);
+            if (isFilled == false)
             {
-                cout << "Enter the first position you want to place the char at: ";
-                cin >> pos1;
-                cout << "Enter the second position you want to place the char at: ";
-                cin >> pos2;
-                isFilled = field->setField(getPlayerChar(), pos1, pos2);
+                while (isFilled == false)
+                {
+                    cout << "Enter the first position you want to place the char at: ";
+                    cin >> pos1;
+                    cout << "Enter the second position you want to place the char at: ";
+                    cin >> pos2;
+                    isFilled = field->setField(getPlayerChar(), pos1, pos2);
+                }
             }
         }
-    }
-};
+    };
 
 }
 

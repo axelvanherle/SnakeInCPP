@@ -10,34 +10,35 @@
 
 using namespace std;
 
-namespace AxelTTT {
-
-class PlayGame
+namespace AxelTTT
 {
-public:
-    // Standard constructor
-    PlayGame(string boardName);
-    // Deconstructor
-    ~PlayGame();
 
-    // Make the player objects
-    void makePlayerObjects(void);
+    class PlayGame
+    {
+    public:
+        // Standard constructor
+        PlayGame(string boardName);
+        // Deconstructor
+        ~PlayGame();
 
-    // Getter and Setter.
-    void setPlayerValues(Player *newPlayer);
-    void getPlayerValues(void);
+        // Make the player objects
+        void makePlayerObjects(void);
 
-    // Play the game
-    void PlayTicTacToe(void);
+        // Getter and Setter.
+        void setPlayerValues(Player *newPlayer);
+        void getPlayerValues(void);
 
-    // Saves the field to a file.
-    void saveField(void);
+        // Play the game
+        void PlayTicTacToe(void);
 
-private:
-    ofstream MyFile;
-    Player *player1;
-    Player *player2;
-    PlayingField field;
-};
+        // Saves the field to a file.
+        void saveField(void);
+
+    private:
+        ofstream MyFile;
+        Player *player1;
+        Player *player2;
+        PlayingField field;
+    };
 }
 #endif // PLAYGAME_H
