@@ -40,7 +40,7 @@ PlayGame::~PlayGame()
 void PlayGame::makePlayerObjects(void)
 {
     unsigned char var = 'n';
-    int temp = 0;
+    string temp;
 
     // Explination
     cout << "How do i play?" << endl;
@@ -76,13 +76,13 @@ void PlayGame::makePlayerObjects(void)
         cout << "[1] -> Human" << endl
              << "[2] -> AI" << endl;
         cin >> temp;
-        if (temp == 1)
+        if (temp[0] == '1')
         {
             player1 = new HumanPlayer();
             cout << "Created a human player." << endl;
             setPlayerValues(player1);
         }
-        else if (temp == 2)
+        else if (temp[0] == '2')
         {
             player1 = new AIPlayer("AI Player");
             cout << "Created a AI player." << endl;
@@ -97,13 +97,13 @@ void PlayGame::makePlayerObjects(void)
         cout << "[1] -> Human" << endl
              << "[2] -> AI" << endl;
         cin >> temp;
-        if (temp == 1)
+        if (temp[0] == '1')
         {
             player2 = new HumanPlayer();
             cout << "Created a human player." << endl;
             setPlayerValues(player2);
         }
-        else if (temp == 2)
+        else if (temp[0] == '2')
         {
             player2 = new AIPlayer("AI Player");
             cout << "Created a AI player." << endl;
