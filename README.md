@@ -2,7 +2,7 @@
 
 Other contributors only did a small bug fix, doing this resulted in extra points for them. Besides these small bug fixes everything else was done by me.
 
-I played a lot with GitHub actions and automation. This wasn't for points, but I already passed this course so did what I like.
+I played a lot with GitHub actions and automation. This wasn't for points, I already passed this course so did what I like.
 
 ## How to run?
 
