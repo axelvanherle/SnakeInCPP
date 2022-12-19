@@ -76,13 +76,13 @@ void PlayGame::makePlayerObjects(void)
         cout << "[1] -> Human" << endl
              << "[2] -> AI" << endl;
         cin >> temp;
-        if (temp[0] == '1')
+        if (temp[0] == '1' && temp.length() == 1)
         {
             player1 = new HumanPlayer();
             cout << "Created a human player." << endl;
             setPlayerValues(player1);
         }
-        else if (temp[0] == '2')
+        else if (temp[0] == '2' && temp.length() == 1)
         {
             player1 = new AIPlayer("AI Player");
             cout << "Created a AI player." << endl;
@@ -97,13 +97,13 @@ void PlayGame::makePlayerObjects(void)
         cout << "[1] -> Human" << endl
              << "[2] -> AI" << endl;
         cin >> temp;
-        if (temp[0] == '1')
+        if (temp[0] == '1' && temp.length() == 1)
         {
             player2 = new HumanPlayer();
             cout << "Created a human player." << endl;
             setPlayerValues(player2);
         }
-        else if (temp[0] == '2')
+        else if (temp[0] == '2' && temp.length() == 1)
         {
             player2 = new AIPlayer("AI Player");
             cout << "Created a AI player." << endl;
